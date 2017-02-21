@@ -1,0 +1,22 @@
+{
+  "name": "ng-classifieds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/robbee72/ngClassifieds.git)"
+  },
+  "author": "KLR",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-material": "^1.1.3",
+    "mdi": "^1.8.36",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
