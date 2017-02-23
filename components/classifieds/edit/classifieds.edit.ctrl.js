@@ -34,8 +34,8 @@
 
       function saveEdit() {
         vm.classifieds.$save(vm.classified).then(function() {
-         $scope.$emit('editSaved', 'Edit Saved');
-        vm.sidenavBar = false;    
+            $scope.sidenavOpen = false;
+            $scope.$emit('editSaved', 'Edit Saved');  
         });
          
       }

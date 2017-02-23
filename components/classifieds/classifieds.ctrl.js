@@ -9,8 +9,8 @@
       var vm = this;
 
       vm.openSidebar = openSidebar;
-      vm.editClassified = editClassified;
-      vm.deleteClassified = deleteClassified;
+    //  vm.editClassified = editClassified;
+     // vm.deleteClassified = deleteClassified;
       vm.showSearchBar = false;
       vm.showFilters = false;
       
@@ -34,38 +34,21 @@
 
       vm.sidebarTitle;
 
-      function showToast(message) {
-        $mdToast.show(
-          $mdToast.simple()
-            .content(message)
-            .position('top, right')
-            .hideDelay(3000)
-        );
-      }
+      
 
       function openSidebar() {
         vm.sidebarTitle = 'Add a Classified';
         $state.go('classifieds.new');
       }
 
-      function editClassified(classified) {
-        $state.go('classifieds.edit', { 
-            id: classified.$id,
-        });
+      function saveEdit() {
+          vm.editing = false;
+          vm.classifieds = {};
+          closeSidebar();
+          showToast("Edit saved!");
+          
       }
-
-      function deleteClassified(event, classified) {
-        var confirm = $mdDialog.confirm()
-            .title('Are you sure you want to delete ' + classified.title + '?')
-            .ok('Yes')
-            .cancel('No')
-            .targetEvent(event);
-        $mdDialog.show(confirm).then(function() {
-           vm.classifieds.$remove(classified);
-            showToast('Classified Deleted!!!');      
-        }, function() {
-        });
-      }
+      
       
     vm.sidebarTitle;
 
