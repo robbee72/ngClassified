@@ -20,9 +20,31 @@
         <script src="node_modules/angular-aria/angular-aria.js"></script>
         <script src="node_modules/angular-material/angular-material.js"></script>
         <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="components/classifieds/classifieds.tmpl.html"></script>
-        <script src="components/classifieds.fac.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+        
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+      
+        <script src="scripts/app.js"></script>
+        <script src="components/classifieds/classifieds.ctrl.js"></script>
+        <script src="components/classifieds/classifieds.fac.js"></script>
+        <script src="components/classifieds/new/classifieds.new.ctrl.js"></script>
+        <script src="components/classifieds/edit/classifieds.edit.ctrl.js"></script>
+      
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCjUz-dmmdhOJJFuG5WlsS9X5LDXmDrBy4",
+            authDomain: "ngclassifieds-f2144.firebaseapp.com",
+            databaseURL: "https://ngclassifieds-f2144.firebaseio.com",
+            storageBucket: "ngclassifieds-f2144.appspot.com",
+            messagingSenderId: "800859597677"
+          };
+          firebase.initializeApp(config);
+        </script>
+        
     </body>
 </html>
