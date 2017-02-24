@@ -8,8 +8,9 @@
             return {
                 templateUrl: "components/classifieds/card/classified-card.tmpl.html",
                 scope: {
-                    classifieds: "=classifieds"
-
+                    classifieds: "=classifieds",
+                    classifiedsFilter: "=classifiedsFilter",
+                    category: "=category"
                 },
                 controller: classifiedCardController,
                 controllerAs: "vm"
