@@ -1,0 +1,74 @@
+<md-card
+  class="electedofficial" 
+  ng-repeat="electedofficial in electedofficials | 
+            filter: electedofficialsFilter | 
+            filter: category" 
+            flex="30">
+
+  <img ng-src="{{ electedofficial.image }}" class="md-avatar">
+  <md-card-content>
+    <div class="electedofficial-info" ng-show="!showContact">
+      <h2 class="md-title">{{ electedofficial.title }}</h2>
+      <h3>{{ electedofficial.price | date }}</h3>
+      <p>{{ electedofficial.description }}</p>
+    </div>
+
+    <div class="electedofficial-contact" ng-if="showContact">
+      <p>
+        <md-icon class="mdi mdi-account"></md-icon> 
+        {{ electedofficial.contact.name }}
+      </p>
+      <p>
+        <md-icon class="mdi mdi-phone"></md-icon>
+        {{ electedofficial.contact.phone }}
+      </p>
+      <p>
+        <md-icon class="mdi mdi-email"></md-icon>
+        {{ electedofficial.contact.email }}
+      </p>
+    </div>
+
+    <div layout="row">
+      <md-button 
+        ng-click="showContact = true"
+        ng-show="!showContact">
+        Contact
+      </md-button>
+
+      <md-button 
+        ng-click="showContact = false"
+        ng-show="showContact">
+        Details
+      </md-button>
+
+      <md-button 
+        ng-click="showAdmin = true"
+        ng-show="!showAdmin">
+        Admin
+      </md-button>
+
+      <md-button 
+        ng-click="showAdmin = false"
+        ng-show="showAdmin">
+        Close
+      </md-button>
+    </div>
+
+    <div class="electedofficial-admin" ng-if="showAdmin">
+      <h3>Admin</h3>
+      <div layout="row">
+        <md-button 
+          class="md-primary"
+          ng-click="vm.editElectedofficial(electedofficial)">
+          Edit
+        </md-button>
+        <md-button 
+          class="md-warn"
+          ng-click="vm.deleteElectedofficial($event, electedofficial)">
+          Delete
+        </md-button>
+      </div>
+    </div>
+
+  </md-card-content>
+</md-card>

@@ -3,32 +3,32 @@
   "use strict";
 
   angular
-    .module('ngClassifieds', ['ngMaterial', 'ui.router', 'firebase'])
+    .module('electedofficials', ['ngMaterial', 'ui.router', 'firebase'])
     .config(function($mdThemingProvider, $stateProvider, $urlRouterProvider) {
 
       $mdThemingProvider.theme('default')
         .primaryPalette('purple')
         .accentPalette('orange');
 
-      $urlRouterProvider.otherwise('/classifieds');
+      $urlRouterProvider.otherwise('/electedofficials');
 
       $stateProvider
-        .state('classifieds', {
-          url: '/classifieds',
-          templateUrl: 'components/classifieds/classifieds.tmpl.html',
-          controller: 'classifiedsController as vm'
+        .state('electedofficials', {
+          url: '/electedofficials',
+          templateUrl: 'components/electedofficials/electedofficials.tmpl.html',
+          controller: 'electedofficialsController as vm'
         })
-        .state('classifieds.new', {
+        .state('electedofficials.new', {
           url: '/new',
-          templateUrl: 'components/classifieds/new/classifieds.new.tmpl.html',
-          controller: 'newClassifiedsController as vm'
+          templateUrl: 'components/electedofficials/new/electedofficials.new.tmpl.html',
+          controller: 'newElectedofficialsController as vm'
         })
-        .state('classifieds.edit', {
+        .state('electedofficials.edit', {
           url: '/:id/edit',
-          templateUrl: 'components/classifieds/edit/classifieds.edit.tmpl.html',
-          controller: 'editClassifiedsController as vm',
+          templateUrl: 'components/electedofficials/edit/electedofficials.edit.tmpl.html',
+          controller: 'editElectedofficialsController as vm',
           params: {
-            classified: null
+            id: null
           }
         });
     });

@@ -1,5 +1,5 @@
 {
-  "name": "ng-classifieds",
+  "name": "electedofficials",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "(https://github.com/robbee72/ngClassifieds.git)"
+    "url": "(https://github.com/robbee72/electedofficials.git)"
   },
   "author": "KLR",
   "license": "ISC",

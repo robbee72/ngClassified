@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>ngClassifieds</title>
+    <title>Elected Government Officials</title>
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <link href="node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   
     </head>
-  <body ng-app="ngClassifieds">
+  <body ng-app="electedofficials">
 
       <div ui-view></div>
       
@@ -28,23 +28,28 @@
         <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
       
         <script src="scripts/app.js"></script>
-        <script src="components/classifieds/classifieds.ctrl.js"></script>
-        <script src="components/classifieds/classifieds.fac.js"></script>
-        <script src="components/classifieds/new/classifieds.new.ctrl.js"></script>
-        <script src="components/classifieds/edit/classifieds.edit.ctrl.js"></script>
-      
+        <script src="components/electedofficials/electedofficials.ctrl.js"></script>
+        <script src="components/electedofficials/electedofficials.fac.js"></script>
+        <script src="components/electedofficials/new/electedofficials.new.ctrl.js"></script>
+        <script src="components/electedofficials/edit/electedofficials.edit.ctrl.js"></script>
+        <script src="components/electedofficials/card/electedofficial-card.dirt.js"></script>
+
+        
         <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
         <script>
           // Initialize Firebase
           var config = {
-            apiKey: "AIzaSyCjUz-dmmdhOJJFuG5WlsS9X5LDXmDrBy4",
-            authDomain: "ngclassifieds-f2144.firebaseapp.com",
-            databaseURL: "https://ngclassifieds-f2144.firebaseio.com",
-            storageBucket: "ngclassifieds-f2144.appspot.com",
-            messagingSenderId: "800859597677"
+            apiKey: "AIzaSyDDUotIb-C0cIZpl7jzUuXd-JKj55uyb7I",
+            authDomain: "electedofficials-4b77c.firebaseapp.com",
+            databaseURL: "https://electedofficials-4b77c.firebaseio.com",
+            storageBucket: "electedofficials-4b77c.appspot.com",
+            messagingSenderId: "395717671493"
           };
           firebase.initializeApp(config);
         </script>
+
+      
+     
         
     </body>
 </html>
