@@ -13,7 +13,7 @@
       vm.closeSidebar = closeSidebar;
       vm.saveEdit = saveEdit;
 
-      vm.sidebarTitle = 'Edit Elected Official';
+      vm.sidebarName = 'Edit Elected Official';
 
       $timeout(function() {
         $mdSidenav('left').open();    

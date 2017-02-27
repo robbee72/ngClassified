@@ -6,17 +6,20 @@
             flex="30">
 
   <img ng-src="{{ electedofficial.image }}" class="md-avatar">
-  <md-card-content>
-    <div class="electedofficial-info" ng-show="!showContact">
-      <h2 class="md-title">{{ electedofficial.title }}</h2>
-      <h3>{{ electedofficial.price | date }}</h3>
-      <p>{{ electedofficial.description }}</p>
-    </div>
+    <md-card-content>
+      
+        <div class="electedofficial-info" ng-show="!showContact">
+          <h2 class="md-name">{{ electedofficial.name }}</h2>
+          <h5>{{ electedofficial.term | date }}</h5>
+          <p>{{ electedofficial.description }}</p>
+        </div>
 
+    </md-card-content>  
+      
     <div class="electedofficial-contact" ng-if="showContact">
       <p>
-        <md-icon class="mdi mdi-account"></md-icon> 
-        {{ electedofficial.contact.name }}
+        <md-icon class="mdi mdi-home"></md-icon> 
+        {{ electedofficial.contact.website }}
       </p>
       <p>
         <md-icon class="mdi mdi-phone"></md-icon>
@@ -28,7 +31,7 @@
       </p>
     </div>
 
-    <div layout="row">
+    <div layout="column" layout-align="center">
       <md-button 
         ng-click="showContact = true"
         ng-show="!showContact">
@@ -44,7 +47,7 @@
       <md-button 
         ng-click="showAdmin = true"
         ng-show="!showAdmin">
-        Admin
+        Admin 
       </md-button>
 
       <md-button 
@@ -55,8 +58,8 @@
     </div>
 
     <div class="electedofficial-admin" ng-if="showAdmin">
-      <h3>Admin</h3>
-      <div layout="row">
+      <h3>Administrator</h3>
+      <div layout="column">
         <md-button 
           class="md-primary"
           ng-click="vm.editElectedofficial(electedofficial)">
@@ -70,5 +73,5 @@
       </div>
     </div>
 
-  </md-card-content>
+  
 </md-card>

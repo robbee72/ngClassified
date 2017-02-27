@@ -26,13 +26,13 @@
 
         function editElectedofficial(electedofficial) {
           vm.editing = true;
-          vm.sidebarTitle = 'Edit Elected Official';
+          vm.sidebarName = 'Edit Elected Official';
           $state.go('electedofficials.edit', { id: electedofficial.$id });
         }
 
         function deleteElectedofficial(event, electedofficial) {
           var confirm = $mdDialog.confirm()
-              .title('Are you sure you want to delete ' + electedofficial.title + '?')
+              .name('Are you sure you want to delete ' + electedofficial.name + '?')
               .targetEvent(event)
               .ok('Yes')
               .cancel('No');

@@ -24,7 +24,7 @@
         showToast(message);
       });
 
-      vm.sidebarTitle;
+      vm.sidebarName;
 
       function showToast(message) {
         $mdToast.show(
@@ -36,7 +36,7 @@
       }
 
       function openSidebar() {
-        vm.sidebarTitle = 'Add an Elected official';
+        vm.sidebarName = 'Add an Elected official';
         $state.go('electedofficials.new');
       }
 

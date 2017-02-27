@@ -7,8 +7,8 @@
     .config(function($mdThemingProvider, $stateProvider, $urlRouterProvider) {
 
       $mdThemingProvider.theme('default')
-        .primaryPalette('purple')
-        .accentPalette('orange');
+        .primaryPalette('blue')
+        .accentPalette('red');
 
       $urlRouterProvider.otherwise('/electedofficials');
 

@@ -11,7 +11,7 @@
       vm.closeSidebar = closeSidebar;
       vm.saveElectedofficial = saveElectedofficial;
 
-      vm.sidebarTitle = 'Add an Elected Official';
+      vm.sidebarName = 'Add an Elected Official';
 
       // We need a watcher to trigger the sidenav
       // opening and closing
@@ -29,17 +29,7 @@
         $mdSidenav('left').open();     
       });
 
-      // Case 1 - close the sidenav and change state manually
-      // function closeSidebar = function() {
-      //   vm.electedofficial = {};
-      //   $mdSidenav('left')
-      //     .close()
-      //     .then(function() {
-      //       $state.go('electedofficials');
-      //   });      
-      // }
-
-      // Case 2 - simply use the watcher to move state
+      
       function closeSidebar() {
         vm.electedofficial = {};
         $scope.sidenavOpen = false;        
@@ -49,9 +39,10 @@
         if(electedofficial) {
 
           electedofficial.contact = {
-            name: "Ryan Chenkie", 
+            name: "Donald J Trump", 
+            website: "https://www.donaldjtrump.com",
             phone: "(555) 555-5555",
-            email: "ryanchenkie@gmail.com"
+            email: "the donald@gmail.com"
           }
           
           
